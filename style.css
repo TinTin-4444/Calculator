@@ -1,1 +1,21 @@
+:root {
+  --key: #ffffff;
+  --key-op: #2f3b8a;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --key: #2c3438; --key-op: #5866cf; }
+}
 
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 10px;
+}
+button.k {
+  height: 62px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--key);
+}
+button.op { background: var(--key-op); color: #fff; }
+button.k:active { transform: translateY(2px); } /* press effect */
